@@ -14,3 +14,5 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Anonymous-Random-Text-Chat-System
+A full-stack real-time anonymous chat application that connects users randomly for one-to-one conversations using WebSockets. The system ensures seamless matchmaking, real-time messaging, and proper session handling without requiring user authentication.
