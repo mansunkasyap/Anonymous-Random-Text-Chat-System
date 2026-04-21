@@ -1,0 +1,25 @@
+/* styles.css */
+
+.chat-container {
+  max-width: 500px;
+  margin: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.messages {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.message {
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.input-box {
+  display: flex;
+  gap: 10px;
+}
