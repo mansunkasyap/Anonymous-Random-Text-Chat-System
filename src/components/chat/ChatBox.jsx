@@ -74,14 +74,28 @@ const ChatBox = ({ status, messages, send }) => {
       />
 
       {/* Main Layout */}
-      <Box sx={{ display: "flex", flexDirection: "column", height: "100%" }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          height: "100%",
+          minHeight: 0,
+        }}
+      >
 
         {/* Status Bar */}
         {status !== STATUS.IDLE && <StatusBar status={status} />}
         {status !== STATUS.IDLE && <Divider sx={{ my: 1 }} />}
 
         {/* Top Section */}
-        <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
+        <Box
+          sx={{
+            flex: 1,
+            display: "flex",
+            flexDirection: "column",
+            minHeight: 0, 
+          }}
+        >
 
           {/* Idle */}
           {status === STATUS.IDLE && (
@@ -108,12 +122,18 @@ const ChatBox = ({ status, messages, send }) => {
             </Stack>
           )}
 
-          {/* Connected */}
-          {status === STATUS.CONNECTED && (
-            <Box sx={{ flex: 1, overflowY: "auto", mb: 1 }}>
-              <MessageList messages={messages} />
-            </Box>
-          )}
+          {/* Connected - Messages */}
+          <Box
+            sx={{
+              flex: 1,
+              minHeight: 0,
+              overflowY: "auto",
+              mb: 1,
+              px: 1,
+            }}
+          >
+            <MessageList messages={messages} />
+          </Box>
 
           {/* Disconnected */}
           {status === STATUS.DISCONNECTED && (
@@ -140,26 +160,8 @@ const ChatBox = ({ status, messages, send }) => {
           />
         )}
 
-        {/* Controls */}
-        {/* {status === STATUS.CONNECTED && (
-          <Stack direction="row" spacing={2} sx={{ mt: 1 }}>
-            <Button
-              fullWidth
-              variant="outlined"
-              color="error"
-              startIcon={<SkipNextIcon />}
-              onClick={skipChat}
-            >
-              Skip This Chat
-            </Button>
-          </Stack>
-        )} */}
-
-
         {status === STATUS.CONNECTED && (
           <Stack direction="row" spacing={2} sx={{ mt: 1 }}>
-
-            {/* Skip */}
             <Button
               fullWidth
               variant="outlined"
@@ -179,7 +181,6 @@ const ChatBox = ({ status, messages, send }) => {
             >
               End Chat
             </Button>
-
           </Stack>
         )}
       </Box>

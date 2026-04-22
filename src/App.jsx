@@ -33,6 +33,7 @@ function App() {
             height: "70vh",
             display: "flex",
             flexDirection: "column",
+            width: "100%",
           }}
         >
           <ChatBox status={status} messages={messages} send={send} />
