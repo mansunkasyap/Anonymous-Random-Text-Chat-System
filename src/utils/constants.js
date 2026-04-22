@@ -10,7 +10,8 @@ export const STATUS = {
 export const EVENTS = {
   START: "start",
   MESSAGE: "message",
-  SKIP: "skip"
+  SKIP: "skip",
+  END: "end"
 };
 
 export const SENDER = {

@@ -170,7 +170,6 @@ const ChatBox = ({ status, messages, send }) => {
               Skip
             </Button>
 
-            {/* ✅ End Chat */}
             <Button
               fullWidth
               variant="contained"
